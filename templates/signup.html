@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Sign Up | SIH</title>
+        <!-- Bootstrap Core CSS -->
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="css/style.css" rel="stylesheet">
+        <!-- jQuery -->
+        <script src="js/jquery.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+        <link href="style.css" rel="stylesheet">
+
+    
+
+    </head>
+
+
+
+    <body style="padding-top: 50px;">
+       <!-- Header -->
+       <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="index.php">Job Seeker.com</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+            <li><a href="signup.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    </ul>
+        </div>
+    </div>
+</div>
+        <!--Header end-->
+
+        <div class="container">    
+        <div id="signupbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
+            <div class="panel panel-info" >
+                    <div class="panel-heading">
+                        <div class="panel-title">Sign Up</div>
+                       
+                    </div>     
+
+                    <div style="padding-top:30px" class="panel-body" >
+
+                        <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+                            
+                        <form class="form-horizontal" action="signup_script.php" method="POST">
+                                    
+                        
+                            
+
+                                    <div class="form-group">
+                                    <label for="name" class="col-md-3 control-label">Name</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="name" placeholder="Enter Name"  required = "true" pattern="^[A-Za-z\s]{1,}[\.]{0,1}[A-Za-z\s]{0,}$">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email" class="col-md-3 control-label">Email</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="e-mail" placeholder="Email Address" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required = "true"><?php error_reporting(E_ERROR | E_PARSE); ?>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="password" class="col-md-3 control-label">Password</label>
+                                    <div class="col-md-9">
+                                        <input type="password" class="form-control" name="password" placeholder="Password" pattern=".{6,}"  required = "true">
+                                    </div>
+                                </div>
+                                
+                               
+                                <div class="form-group">
+                                    <label for="city" class="col-md-3 control-label">City</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="city" placeholder="City" required = "true">
+                                    </div>
+                                </div>
+
+                               
+                              
+
+                                
+                          
+
+
+                                <div style="margin-top:10px" class="form-group">
+                                    <!-- Button -->
+
+                                    <div class="col-sm-12 controls">
+                                   <center> <button type="submit" name="submit" class="btn btn-success">Submit </button></center>
+                                     
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <div class="col-md-12 control">
+                                        <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%" >
+                                            Already have Account??
+                                        <a href="login.php" onClick="$('#loginbox').hide(); $('#signupbox').show()">
+                                            Sign In Here
+                                        </a>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </form>     
+
+
+
+                        </div>                     
+                        </div>
+        </div> 
+        </div>
+        
+       
+<section id="footer">
+          <!--Footer-->
+          <footer>
+    <div class="container">
+        <center>
+        <p>Copyright &copy; Team Tasksheela. All Rights Reserved </p>		
+        </center>
+    </div>
+</footer>
+        <!--Footer end-->
+</section>
+        
+</body>
+</html>
