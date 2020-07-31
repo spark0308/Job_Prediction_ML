@@ -3,9 +3,9 @@ from flask_sqlalchemy import SQLAlchemy
 
 
 from flask_wtf import FlaskForm,RecaptchaField
-from wtforms import (StringField,SubmitField,
+'''from wtforms import (StringField,SubmitField,
                      DateTimeField, RadioField,
-                     SelectField,TextAreaField, DateField)
+                     SelectField,TextAreaField, DateField)'''
 
 from wtforms.validators import DataRequired
 
@@ -34,7 +34,7 @@ class Widgets(FlaskForm):
 	recaptcha = RecaptchaField()
 
 
-@app.route("/index",methods = ['GET','POST'])
+@app.route("/",methods = ['GET','POST'])
 def index():
 	
 	return 'index' #render_template #('index.html')
@@ -61,6 +61,7 @@ def signin():
 @app.route("/home",methods = ['GET','POST'])
 def home():
 	
-	return'index' #render_templates #('home.html')
+	return'home' #render_templates #('home.html')
 
+app.run(debug = True)
 
