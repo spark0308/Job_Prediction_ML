@@ -27,8 +27,8 @@ class User(db.Model):
 	
 	name = db.Column(db.String(80), unique = False, nullable=False)
 	email = db.Column(db.String(20),unique = True, nullable=False)
-	password = db.Column(db.String(20),unique = True, nullable=False)
-	city = db.Column(db.String(20),unique = True, nullable=False)
+	password = db.Column(db.String(20),unique = False, nullable=False)
+	city = db.Column(db.String(20),unique = False, nullable=False)
 
 class Widgets(FlaskForm):
 	recaptcha = RecaptchaField()
@@ -43,14 +43,13 @@ def index():
 def signup():
 	form = Widgets()
 	if(request.method == "POST"):
-		if(form.validate_on_submit()):
 			Vname = request.form.get('name')
 			Vemail = request.form.get('e-mail')
 			Vpassword = request.form.get('password')
 			Vcity = request.form.get('city')
 			entry = User( name = Vname ,email = Vemail, password = Vpassword, city = Vcity)
 			db.session.add(entry)
-			db.session.commit
+			db.session.commit()
 	return render_template('signup.html')
 
 @app.route("/signin",methods = ['GET','POST'])
