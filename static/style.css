@@ -1,0 +1,100 @@
+body{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url(ta.jpg) ;
+    background-size: cover;
+
+}
+.center{
+    margin: 0;
+    width: 100%;
+    padding: 50px;
+}
+
+    
+
+
+
+#footer {
+    position: fixed;
+    height: 50px;
+   
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+}
+
+
+/*search box css start here*/
+.search-sec{
+    padding: 2rem;
+   
+}
+.search-slt{
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #55595c;
+    background-color: #fff;
+
+
+    border: 1px solid #ccc;
+    height: calc(3rem + 2px) !important;
+    border-radius:0;
+}
+.wrn-btn{
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    height: calc(3rem + 2px) !important;
+    border-radius:0;
+}
+@media (min-width: 992px){
+    .search-sec{
+        position: relative;
+        top: -60px;
+        
+    }
+}
+
+@media (max-width: 992px){
+    .search-sec{
+       
+    }
+}
+
+
+#banner_image {
+    padding-bottom: 100px;
+    text-align: center;
+    color: #f8f8f8;
+    background: url(img/search.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+#banner_content {
+    position: relative;
+    padding-top: 6%;
+    padding-bottom: 2%;
+    margin-top: 12%;
+    margin-bottom: 12%;
+    background-color: rgba(255, 255, 255, 0.7);
+   width: 0px;
+}
+
+
+.submit_button{
+    size: 100px;
+    background-color: rgb(12, 12, 0);
+    color: tomato;
+}
+
+
+element.style {
+    color: black;
+    background-color: red;
+}

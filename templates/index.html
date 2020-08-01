@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>SIH</title>
+        <!-- Bootstrap Core CSS -->
+        <link href="{{url_for('static',filename = 'css/bootstrap.css')}}" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="{{url_for('static',filename = 'css/style.css')}}" rel="stylesheet">
+        <!-- jQuery -->
+        <script src="{{url_for('static',filename = 'js/jquery.js')}}"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="{{url_for('static',filename = 'js/bootstrap.min.js')}}"></script>
+
+    
+
+    </head>
+
+    <body style="padding-top: 50px;">
+        <!-- Header -->
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img  src="{{url_for('static',filename = 'img/2.png')}}" style="width: 250px; height: 60px;position: absolute;left: 5%;top: 2%;" ></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                        <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--Header end-->
+
+                    <!--Carousel-->
+      <div class="content">
+        <section>
+    
+            <div class="image featured">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                    </ol>
+    
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="{{url_for('static',filename = 'img/c1.jpg')}}" style="background-repeat: no-repeat;"  alt="">
+                            <div class="carousel-caption d-none d-md-block">
+                             <h3>Our team is here to help you out</h3>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="{{url_for('static',filename = 'img/c2.jpg')}}" alt="">
+                            <div class="carousel-caption d-none d-md-block">
+                             <h3>Connect with us</h3>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="{{url_for('static',filename = 'img/c3.jpg')}}" alt="">
+                            <div class="carousel-caption d-none d-md-block">
+                              <h3>We help you to find your dream job</h3>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="{{url_for('static',filename = 'img/c4.jpg')}}" alt="">
+                            <div class="carousel-caption d-none d-md-block">
+                            <h3>Find all types of jobs with us</h3>
+                            </div>
+                          </div>
+                    </div>
+                  </div>
+            </div>
+        </section>
+        </div>
+    <!--Carosel end-->
+
+    <br>
+ 
+
+        <div id="content">
+            <!--Main banner image-->
+            <div id = "banner_image">
+                <div class="container">	
+                    <center>
+                        <div id="banner_content">
+                            <h1>Looking for Jobs??</h1>
+                            <h4>We are here to help out...</h4>
+                            <br/>
+                            <a  href="login" class="btn btn-danger btn-lg active">Get Started</a>
+                        </div>
+                    </center>
+                </div>
+            </div>
+            <!--Main banner image end-->
+
+ 
+
+
+    <div class="container-fluid">
+        <div class="row text-center" id="item_list">
+            <div class="col-sm-6">
+                
+                    <div class="thumbnail">
+                        <img src="{{url_for('static',filename = 'img/jobs.jpeg')}}" alt="">
+                       
+                    </div> 
+                </a>
+            </div>
+
+            <div class="col-sm-6">
+               
+                    <div class="thumbnail">
+                        <center>
+
+                            <div id='page' style='width: 600px;height: 500px; margin-top: 40px; '>
+                                <h1 style= 'font-size :40px;'>Introduction</h1>
+                        
+                        <h2 style= 'font size:40px; margin-top: 10px;color:#2e8baa'> "The best way to predict the future is to invent it"</h2>
+                        <h3 style='font-size: 20px; color:#0e333f'>-Abraham Lincoln. </h3> 
+                        
+                        <p style='font-size: 25px; font-family: serif; text-align: left;margin-top: 30px; color:#08afec ' >We are here to help you to create a bright future. 
+                         Your job search goal will be to find and secure that job. This site  reaching out to help you in your job search as we walk down that path .
+                        The key to your personal success involves using the appropriate techniques to gain a competitive edge by putting this information to use.
+                        This site is not a one-size-fits-all formula. It requires your interaction and your personal touch.</p>
+                        
+                        
+                        </div>
+                        </center>
+                    </div> 
+                </a>
+            </div>
+                </div>
+            </div>
+
+            <!--Item categories listing-->
+            <div class="container-fluid">
+                <div class="row text-center" id="item_list">
+                    <div class="col-sm-4">
+                        
+                            <div class="thumbnail">
+                                <img src="{{url_for('static',filename = 'img/gov.png')}}" alt="">
+                               
+                            </div> 
+                        </a>
+                    </div>
+
+                    <div class="col-sm-4">
+                       
+                            <div class="thumbnail">
+                                <img src="{{url_for('static',filename = 'img/sih.jpg')}}" alt="">
+                                
+                            </div> 
+                        </a>
+                    </div>
+
+                    <div class="col-sm-4">
+                       
+                            <div class="thumbnail">
+                                <img src="{{url_for('static',filename = 'img/bvp.png')}}" alt="">
+                               
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--Item categories listing end-->
+        </div>
+
+
+        
+
+        <!--Footer-->
+        <footer>
+            <div class="container">
+                <center>
+                    <p>Copyright &copy; Team Tasksheela. All Rights Reserved </p>	
+                </center>
+            </div>
+        </footer>
+        <!--Footer end-->
+
+
+
+
+
+
+     <!-- Bootstrap core JavaScript-->
+  <script src="{{url_for('static',filename = 'vendor/jquery/jquery.min.js')}}"></script>
+  <script src="{{url_for('static',filename = 'vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="{{url_for('static',filename = 'vendor/jquery-easing/jquery.easing.min.js')}}"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="{{url_for('static',filename = 'js/sb-admin-2.min.js')}}"></script>
+
+  <!-- Page level plugins -->
+  <script src="{{url_for('static',filename = 'vendor/chart.js/Chart.min.js')}}"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="{{url_for('static',filename = 'js/demo/chart-area-demo.js')}}"></script>
+  <script src="{{url_for('static',filename = 'js/demo/chart-pie-demo.js')}}"></script>
+  <script src="{{url_for('static',filename = 'js/demo/chart-bar-demo.js')}}"></script>
+
+
+    </body> 
+</html>
