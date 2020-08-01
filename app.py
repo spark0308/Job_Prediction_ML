@@ -50,7 +50,7 @@ def signup():
 			Vcity = request.form.get('city')
 			entry = User( name = Vname ,email = Vemail, password = Vpassword, city = Vcity)
 			db.session.add(entry)
-			db.session.commit
+			db.session.commit()
 	return render_template('signup.html')
 
 @app.route("/signin",methods = ['GET','POST'])
