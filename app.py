@@ -38,7 +38,7 @@ class Widgets(FlaskForm):
 @app.route("/",methods = ['GET','POST'])
 def index():
 	
-	return 'index' #render_template #('index.html')
+	return render_template('index.html')
 
 @app.route("/signup",methods = ['GET','POST'])
 def signup():

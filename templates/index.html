@@ -5,13 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>SIH</title>
         <!-- Bootstrap Core CSS -->
-        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="{{url_for('static',filename = 'css/bootstrap.css')}}" rel="stylesheet">
         <!-- Custom CSS -->
-        <link href="css/style.css" rel="stylesheet">
+        <link href="{{url_for('static',filename = 'css/style.css')}}" rel="stylesheet">
         <!-- jQuery -->
-        <script src="js/jquery.js"></script>
+        <script src="{{url_for('static',filename = 'js/jquery.js')}}"></script>
         <!-- Bootstrap Core JavaScript -->
-        <script src="js/bootstrap.min.js"></script>
+        <script src="{{url_for('static',filename = 'js/bootstrap.min.js')}}"></script>
 
     
 
@@ -27,12 +27,12 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>                        
                     </button>
-                    <a class="navbar-brand" href="index.html"><img  src="img/2.png" style="width: 250px; height: 60px;position: absolute;left: 5%;top: 2%;" ></a>
+                    <a class="navbar-brand" href="index.html"><img  src="{{url_for('static',filename = 'img/2.png')}}" style="width: 250px; height: 60px;position: absolute;left: 5%;top: 2%;" ></a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="signup.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                        <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                        <li><a href="signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                        <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                     </ul>
                 </div>
             </div>
@@ -56,25 +56,25 @@
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner">
                         <div class="item active">
-                            <img src="img/c1.jpg" style="background-repeat: no-repeat;"  alt="">
+                            <img src="{{url_for('static',filename = 'img/c1.jpg')}}" style="background-repeat: no-repeat;"  alt="">
                             <div class="carousel-caption d-none d-md-block">
                              <h3>Our team is here to help you out</h3>
                             </div>
                         </div>
                         <div class="item">
-                            <img src="img/c2.jpg" alt="">
+                            <img src="{{url_for('static',filename = 'img/c2.jpg')}}" alt="">
                             <div class="carousel-caption d-none d-md-block">
                              <h3>Connect with us</h3>
                             </div>
                         </div>
                         <div class="item">
-                            <img src="img/c3.jpg" alt="">
+                            <img src="{{url_for('static',filename = 'img/c3.jpg')}}" alt="">
                             <div class="carousel-caption d-none d-md-block">
                               <h3>We help you to find your dream job</h3>
                             </div>
                         </div>
                         <div class="item">
-                            <img src="img/c4.jpg" alt="">
+                            <img src="{{url_for('static',filename = 'img/c4.jpg')}}" alt="">
                             <div class="carousel-caption d-none d-md-block">
                             <h3>Find all types of jobs with us</h3>
                             </div>
@@ -98,7 +98,7 @@
                             <h1>Looking for Jobs??</h1>
                             <h4>We are here to help out...</h4>
                             <br/>
-                            <a  href="login.php" class="btn btn-danger btn-lg active">Get Started</a>
+                            <a  href="login" class="btn btn-danger btn-lg active">Get Started</a>
                         </div>
                     </center>
                 </div>
@@ -113,7 +113,7 @@
             <div class="col-sm-6">
                 
                     <div class="thumbnail">
-                        <img src="img/jobs.jpeg" alt="">
+                        <img src="{{url_for('static',filename = 'img/jobs.jpeg')}}" alt="">
                        
                     </div> 
                 </a>
@@ -150,7 +150,7 @@
                     <div class="col-sm-4">
                         
                             <div class="thumbnail">
-                                <img src="img/gov.png" alt="">
+                                <img src="{{url_for('static',filename = 'img/gov.png')}}" alt="">
                                
                             </div> 
                         </a>
@@ -159,7 +159,7 @@
                     <div class="col-sm-4">
                        
                             <div class="thumbnail">
-                                <img src="img/sih.jpg" alt="">
+                                <img src="{{url_for('static',filename = 'img/sih.jpg')}}" alt="">
                                 
                             </div> 
                         </a>
@@ -168,7 +168,7 @@
                     <div class="col-sm-4">
                        
                             <div class="thumbnail">
-                                <img src="img/bvp.png" alt="">
+                                <img src="{{url_for('static',filename = 'img/bvp.png')}}" alt="">
                                
                             </div>
                         </a>
@@ -197,22 +197,22 @@
 
 
      <!-- Bootstrap core JavaScript-->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="{{url_for('static',filename = 'vendor/jquery/jquery.min.js')}}"></script>
+  <script src="{{url_for('static',filename = 'vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
   <!-- Core plugin JavaScript-->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="{{url_for('static',filename = 'vendor/jquery-easing/jquery.easing.min.js')}}"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="js/sb-admin-2.min.js"></script>
+  <script src="{{url_for('static',filename = 'js/sb-admin-2.min.js')}}"></script>
 
   <!-- Page level plugins -->
-  <script src="vendor/chart.js/Chart.min.js"></script>
+  <script src="{{url_for('static',filename = 'vendor/chart.js/Chart.min.js')}}"></script>
 
   <!-- Page level custom scripts -->
-  <script src="js/demo/chart-area-demo.js"></script>
-  <script src="js/demo/chart-pie-demo.js"></script>
-  <script src="js/demo/chart-bar-demo.js"></script>
+  <script src="{{url_for('static',filename = 'js/demo/chart-area-demo.js')}}"></script>
+  <script src="{{url_for('static',filename = 'js/demo/chart-pie-demo.js')}}"></script>
+  <script src="{{url_for('static',filename = 'js/demo/chart-bar-demo.js')}}"></script>
 
 
     </body> 
