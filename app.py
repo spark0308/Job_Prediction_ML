@@ -50,7 +50,8 @@ def signup():
 		Vcity = request.form.get('city')
 		entry = User( name = Vname ,email = Vemail, password = Vpassword, city = Vcity)
 		db.session.add(entry)
-		db.session.commit()
+		db.session.commit#()
+		return redirect(url_for('home'))
 	return render_template('signup.html')
 
 @app.route("/login",methods = ['GET','POST'])
@@ -70,13 +71,13 @@ def login():
 	
 @app.route("/home",methods = ['GET','POST'])
 def home():
-	Uedu = str(request.form.get('education'))
-	Ujob = str(request.form.get('job-title'))
-	Usec = str(request.form.get('sector'))
-	Ucty = str(request.form.get('city'))
-	Usal = str(request.form.get('Salary'))
-	
-	print(Uedu,type(Uedu),Usal,type(Usal))
+	if(request.method == 'POST'):
+		Uedu = str(request.form.get('education'))
+		Ujob = str(request.form.get('job-title'))
+		Usec = str(request.form.get('sector'))
+		Ucty = str(request.form.get('city'))
+		Usal = str(request.form.get('Salary'))
+		
 	return render_template('home.html')
 
 app.run(debug = True)
