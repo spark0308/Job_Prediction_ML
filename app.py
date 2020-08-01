@@ -1,6 +1,7 @@
-from flask import Flask,render_template,request
+from flask import Flask,render_template,request, session, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
-
+from sqlalchemy.orm import sessionmaker
+from sqlalchemy import create_engine
 
 from flask_wtf import FlaskForm,RecaptchaField
 '''from wtforms import (StringField,SubmitField,
@@ -43,19 +44,29 @@ def index():
 def signup():
 	form = Widgets()
 	if(request.method == "POST"):
-			Vname = request.form.get('name')
-			Vemail = request.form.get('e-mail')
-			Vpassword = request.form.get('password')
-			Vcity = request.form.get('city')
-			entry = User( name = Vname ,email = Vemail, password = Vpassword, city = Vcity)
-			db.session.add(entry)
-			db.session.commit()
+		Vname = request.form.get('name')
+		Vemail = request.form.get('e-mail')
+		Vpassword = request.form.get('password')
+		Vcity = request.form.get('city')
+		entry = User( name = Vname ,email = Vemail, password = Vpassword, city = Vcity)
+		db.session.add(entry)
+		db.session.commit()
 	return render_template('signup.html')
 
-@app.route("/signin",methods = ['GET','POST'])
-def signin():
-	
-	return 'login' #render_template #('login.html')
+@app.route("/login",methods = ['GET','POST'])
+def login():
+	if(request.method == "POST"):
+		Login_email = str(request.form.get('e-mail'))
+		Login_password = str(request.form.get('password'))
+		Session = sessionmaker(bind=engine)
+		s = Session()
+		query = s.query(Users).filter(Users.email.in_([Login_email]), Users.password.in_([Login_password]))
+		result = query.first()
+		if(result):
+			return redirect(url_for('home'))
+		else:
+			return redirect(url_for('login'))
+	return render_template('login.html')
 	
 @app.route("/home",methods = ['GET','POST'])
 def home():
