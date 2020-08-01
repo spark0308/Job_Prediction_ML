@@ -70,8 +70,14 @@ def login():
 	
 @app.route("/home",methods = ['GET','POST'])
 def home():
+	Uedu = str(request.form.get('education'))
+	Ujob = str(request.form.get('job-title'))
+	Usec = str(request.form.get('sector'))
+	Ucty = str(request.form.get('city'))
+	Usal = str(request.form.get('Salary'))
 	
-	return'home' #render_templates #('home.html')
+	print(Uedu,type(Uedu),Usal,type(Usal))
+	return render_template('home.html')
 
 app.run(debug = True)
 
