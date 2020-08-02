@@ -45,6 +45,16 @@ def index():
 def signup():
 	form = Widgets()
 	if(request.method == "POST"):
+<<<<<<< HEAD
+		if(form.validate_on_submit()):
+			Vname = request.form.get('name')
+			Vemail = request.form.get('e-mail')
+			Vpassword = request.form.get('password')
+			Vcity = request.form.get('city')
+			entry = User( name = Vname ,email = Vemail, password = Vpassword, city = Vcity)
+			db.session.add(entry)
+			db.session.commit()
+=======
 		Vname = request.form.get('name')
 		Vemail = request.form.get('e-mail')
 		Vpassword = request.form.get('password')
@@ -53,6 +63,7 @@ def signup():
 		db.session.add(entry)
 		db.session.commit()
 		return redirect(url_for('home'))
+>>>>>>> e901c1bca0c8ee9087be713b03719c167b5e25da
 	return render_template('signup.html')
 
 @app.route("/login",methods = ['GET','POST'])
