@@ -29,7 +29,6 @@ def Convert(df):## train and test set
     trans=pd.DataFrame(trans.todense(),columns=cv.get_feature_names())# Create a dataframe with only Eligibility values
     df2=pd.concat([encod,trans],axis=1)
     return df2
-X=Convert(data)
 
 ## pridicting data Set
 
@@ -56,13 +55,19 @@ def fun(salary, job_label,Sector_label,City_label, Education, Month=0):
     df1=pd.concat([df1,df2],axis=1)#Combined data frame which is to be predicted
 
     return df1
-to_predict=fun("3000","SALES & MARKETING AGENT","Engineering","DELHI","BTech")
+    
 
-##for prediction
+    
+if(__name__) == '__main__':
 
-from xgboost import XGBRFRegressor
-model1=xgb.XGBRegressor()
+	X=Convert(data)
+	to_predict=fun("3000","SALES & MARKETING AGENT","Engineering","DELHI","BTech")
 
-X_train,X_test,y_train,y_test=train_test_split(X,data["vacancies"],random_state=0)
-model1.fit(X_train,y_train)
-model1.score(X_test,y_test)
+	##for prediction
+
+	##from xgboost import XGBRFRegressor
+	model1=xgb.XGBRegressor()
+
+	X_train,X_test,y_train,y_test=train_test_split(X,data["vacancies"],random_state=0)
+	model1.fit(X_train,y_train)
+	model1.score(X_test,y_test)

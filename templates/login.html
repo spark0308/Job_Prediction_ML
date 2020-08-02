@@ -22,6 +22,8 @@
 
 
     <body style="padding-top: 50px;">
+    
+    	
         <!-- Header -->
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
@@ -31,7 +33,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>                        
                     </button>
-                    <a class="navbar-brand" href="/index">TAKSHASHELA#111</a>
+                    <a class="navbar-brand" href="/">TAKSHASHELA#111</a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right">
@@ -82,7 +84,17 @@
                                     </div>
                                 </div>
 
-
+								
+      							
+      							{% with messages = get_flashed_messages(with_categories=true) %}
+  									{% if messages %}
+    									<ul class=flashes>
+    									{% for category, message in messages %}
+      									<li class="{{ category }}">{{ message }}</li>
+    									{% endfor %}
+    									</ul>
+  									{% endif %}
+								{% endwith %}
                                 <div class="form-group">
                                     <div class="col-md-12 control">
                                         <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%" >

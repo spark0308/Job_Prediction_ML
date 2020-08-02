@@ -1,4 +1,4 @@
-from flask import Flask,render_template,request, session, redirect, url_for
+from flask import Flask,render_template,request, session, redirect, url_for,flash
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
@@ -21,6 +21,7 @@ app.config["SECRET_KEY"] = "mysecretkey"
 app.config["RECAPTCHA_PUBLIC_KEY"] = "6Lesd7gZAAAAAKVU6WXhPxdbWatc4nKvaWY8Or5G" #"KEY GOES HERE "
 app.config["RECAPTCHA_PRIVATE_KEY"] = "6Lesd7gZAAAAAMh2Tk7l_5oroVbh2kHysGXmG_tS" #"PRIVATE KEY GOES HEREE"
 
+engine = create_engine("mysql://root:@localhost/sih_data")
 
 class User(db.Model):
 	"""sr_no = db.Column(db.Integer, primary_key=True)"""
@@ -61,12 +62,12 @@ def login():
 		Login_password = str(request.form.get('password'))
 		Session = sessionmaker(bind=engine)
 		s = Session()
-		query = s.query(Users).filter(Users.email.in_([Login_email]), Users.password.in_([Login_password]))
+		query = s.query(User).filter(User.email.in_([Login_email]), User.password.in_([Login_password]))
 		result = query.first()
 		if(result):
 			return redirect(url_for('home'))
 		else:
-			return redirect(url_for('login'))
+			flash(u"Wrong email or password","warning")
 	return render_template('login.html')
 	
 @app.route("/home",methods = ['GET','POST'])
